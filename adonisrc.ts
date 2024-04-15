@@ -81,4 +81,8 @@ export default defineConfig({
       reloadServer: false,
     },
   ],
+  assetsBundler: false,
+  unstable_assembler: {
+    onBuildStarting: [() => import('@matstack/remix-adonisjs/build_hook')],
+  },
 })

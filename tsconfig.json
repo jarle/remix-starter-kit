@@ -2,7 +2,7 @@
   "extends": "@adonisjs/tsconfig/tsconfig.app.json",
   "compilerOptions": {
     "rootDir": "./",
-    "outDir": "./build/adonis",
+    "outDir": "./build",
     "module": "ES2022",
     "moduleResolution": "bundler",
     "lib": ["ES2019", "DOM", "DOM.Iterable"],
