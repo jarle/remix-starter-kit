@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node bin/server.js",
     "build": "node ace build",
-    "dev": "node ace serve --watch",
+    "dev": "node ace serve --unstable-hmr",
     "test": "node ace test",
     "lint": "eslint .",
     "format": "prettier --write .",
@@ -46,6 +46,7 @@
     "@types/react-dom": "^18.2.25",
     "eslint": "^8.57.0",
     "pino-pretty": "^11.0.0",
+    "hot-hook": "^0.1.10",
     "prettier": "^3.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5",
@@ -77,5 +78,11 @@
   "eslintConfig": {
     "extends": "@adonisjs/eslint-config/app"
   },
-  "prettier": "@adonisjs/prettier-config"
+  "prettier": "@adonisjs/prettier-config",
+  "hotHook": {
+    "boundaries": [
+      "./app/controllers/**/*.ts",
+      "./app/middlewares/*.ts"
+    ]
+  }
 }
