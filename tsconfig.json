@@ -22,7 +22,8 @@
       "#abilities/*": ["./app/abilities/*.js"],
       "#database/*": ["./database/*.js"],
       "#start/*": ["./start/*.js"],
-      "#config/*": ["./config/*.js"]
+      "#config/*": ["./config/*.js"],
+      "~/*": [ "./resources/remix_app/*" ]
     }
   }
 }

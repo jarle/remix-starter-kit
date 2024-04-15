@@ -71,7 +71,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "reflect-metadata": "^0.2.1",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "vite-tsconfig-paths": "^4.3.2"
   },
   "eslintConfig": {
     "extends": "@adonisjs/eslint-config/app"
