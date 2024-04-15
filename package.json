@@ -6,8 +6,8 @@
   "license": "MIT",
   "scripts": {
     "start": "node bin/server.js",
-    "build": "remix build && node ace build",
-    "dev": "PORT=3000 remix dev --manual -c \"node ace serve --watch\"",
+    "build": "node ace build",
+    "dev": "node ace serve --watch",
     "test": "node ace test",
     "lint": "eslint .",
     "format": "prettier --write .",
@@ -48,7 +48,8 @@
     "pino-pretty": "^10.3.0",
     "prettier": "^3.2.5",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.3",
+    "vite": "^5.2.8"
   },
   "dependencies": {
     "@adonisjs/auth": "^9.1.1",
@@ -57,7 +58,8 @@
     "@adonisjs/session": "^7.3.0",
     "@adonisjs/shield": "^8.1.1",
     "@adonisjs/static": "^1.1.1",
-    "@matstack/remix-adonisjs": "^0.0.18",
+    "@adonisjs/vite": "^3.0.0-11",
+    "@matstack/remix-adonisjs": "^0.0.21",
     "@remix-run/css-bundle": "^2.8.1",
     "@remix-run/node": "^2.8.1",
     "@remix-run/react": "^2.8.1",
@@ -69,7 +71,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "reflect-metadata": "^0.2.1",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "vite-tsconfig-paths": "^4.3.2"
   },
   "eslintConfig": {
     "extends": "@adonisjs/eslint-config/app"

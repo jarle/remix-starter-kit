@@ -2,7 +2,7 @@
   "extends": "@adonisjs/tsconfig/tsconfig.app.json",
   "compilerOptions": {
     "rootDir": "./",
-    "outDir": "./build/adonis",
+    "outDir": "./build",
     "module": "ES2022",
     "moduleResolution": "bundler",
     "lib": ["ES2019", "DOM", "DOM.Iterable"],
@@ -22,7 +22,8 @@
       "#abilities/*": ["./app/abilities/*.js"],
       "#database/*": ["./database/*.js"],
       "#start/*": ["./start/*.js"],
-      "#config/*": ["./config/*.js"]
+      "#config/*": ["./config/*.js"],
+      "~/*": [ "./resources/remix_app/*" ]
     }
   }
 }

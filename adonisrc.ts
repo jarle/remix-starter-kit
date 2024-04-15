@@ -33,6 +33,7 @@ export default defineConfig({
     () => import('@adonisjs/session/session_provider'),
     () => import('@adonisjs/shield/shield_provider'),
     () => import('@adonisjs/static/static_provider'),
+    () => import('@adonisjs/vite/vite_provider'),
     () => import('@matstack/remix-adonisjs/remix_provider'),
   ],
 
@@ -80,4 +81,8 @@ export default defineConfig({
       reloadServer: false,
     },
   ],
+  assetsBundler: false,
+  unstable_assembler: {
+    onBuildStarting: [() => import('@matstack/remix-adonisjs/build_hook')],
+  },
 })
