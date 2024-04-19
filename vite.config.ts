@@ -12,4 +12,9 @@ export default defineConfig({
     }),
     tsconfigPaths(),
   ],
+  optimizeDeps: {
+    esbuildOptions: {
+      target: 'ES2022',
+    },
+  },
 })
