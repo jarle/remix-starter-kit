@@ -2,7 +2,7 @@ import { vitePlugin as remix } from '@remix-run/dev'
 import { defineConfig } from 'vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
 
-export default defineConfig({
+export default defineConfig(({ isSsrBuild }) => ({
   base: '/assets/',
   plugins: [
     remix({
@@ -13,8 +13,10 @@ export default defineConfig({
     tsconfigPaths(),
   ],
   optimizeDeps: {
-    esbuildOptions: {
-      target: 'ES2022',
-    },
+    esbuildOptions: isSsrBuild
+      ? {
+          target: 'ES2022',
+        }
+      : {},
   },
-})
+}))
