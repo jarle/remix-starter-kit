@@ -35,6 +35,7 @@ export default defineConfig({
     () => import('@adonisjs/static/static_provider'),
     () => import('@adonisjs/vite/vite_provider'),
     () => import('@matstack/remix-adonisjs/remix_provider'),
+    () => import('#providers/service_provider'),
   ],
 
   /*
