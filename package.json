@@ -46,12 +46,12 @@
     "@types/react": "^18.2.79",
     "@types/react-dom": "^18.2.25",
     "eslint": "^8.57.0",
-    "pino-pretty": "^11.0.0",
     "hot-hook": "^0.2.0",
+    "pino-pretty": "^11.0.0",
     "prettier": "^3.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5",
-    "vite": "^5.2.9"
+    "vite": "^5.2.10"
   },
   "dependencies": {
     "@adonisjs/auth": "^9.2.0",
@@ -61,7 +61,7 @@
     "@adonisjs/shield": "^8.1.1",
     "@adonisjs/static": "^1.1.1",
     "@adonisjs/vite": "^3.0.0-11",
-    "@matstack/remix-adonisjs": "^0.0.25",
+    "@matstack/remix-adonisjs": "^0.0.28",
     "@remix-run/css-bundle": "^2.8.1",
     "@remix-run/node": "^2.8.1",
     "@remix-run/react": "^2.8.1",
