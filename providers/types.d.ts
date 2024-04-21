@@ -1,4 +1,4 @@
-import { ServiceProviders } from "#services/service_providers.js";
+import { ServiceProviders } from "#services/service_providers";
 
 type ProvidedServices = {
   [K in keyof typeof ServiceProviders]: ReturnType<(typeof ServiceProviders)[K]>
