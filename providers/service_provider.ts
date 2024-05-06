@@ -5,9 +5,11 @@ export default class ServiceProvider {
   constructor(protected app: ApplicationService) {}
 
   register() {
-    Object.entries(ServiceProviders).forEach(async ([key, creator]) => {
-      const constructor = await creator()
-      this.app.container.alias(key as any, constructor.default)
+    Object.entries(ServiceProviders).forEach(([key, creator]) => {
+      this.app.container.singleton(key as any, async (resolver) => {
+        const constructor = await creator()
+        return resolver.make(constructor.default)
+      })
     })
   }
 }
