@@ -19,6 +19,7 @@ npm init adonisjs@latest -- -K="github:jarle/remix-starter-kit"
 ```
 
 After installation you can add your first Remix route by running:
+
 ```
 node ace remix:route hello
 ```
