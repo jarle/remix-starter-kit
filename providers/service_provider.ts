@@ -8,17 +8,13 @@ export default class ServiceProvider {
     Object.entries(ServiceProviders).forEach(([key, lazyServiceProvider]) => {
       this.app.container.singleton(key as any, async (resolver) => {
         const provider = await lazyServiceProvider()
-        if (this.isConstructorProvider(provider)) {
+        if (provider && typeof provider === 'object' && 'default' in provider && typeof provider.default === 'function') {
           return resolver.make(provider.default)
         }
 
         return resolver.make(provider)
       })
     })
-  }
-
-  private isConstructorProvider(module: any) {
-    return module && typeof module === 'object' && 'default' in module && typeof module.default === 'function'
   }
 }
 
