@@ -1,4 +1,4 @@
-export default class WelcomeService {
+export default class HelloService {
   getMessage() {
     return '...powered by AdonisJS 😎'
   }
