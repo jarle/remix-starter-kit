@@ -1,4 +1,4 @@
-type LazyService<T = any> = () => Promise<T | { default: T }> | T | { default: T } | never
+import type { LazyService } from '#providers/service_provider';
 
 // Register services that should be available in the container here
 export const ServiceProviders = {
