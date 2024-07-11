@@ -1,8 +1,6 @@
 import type { ApplicationService } from '@adonisjs/core/types';
 import { ServiceProviders } from '../app/services/_index.js';
 
-export type LazyService<T = any> = () => Promise<T | { default: T }> | T | { default: T } | never
-
 export default class ServiceProvider {
   constructor(protected app: ApplicationService) {}
 
@@ -32,6 +30,10 @@ export default class ServiceProvider {
     })
   }
 }
+
+export type UnwrappedDefault<T> = T | { default: T }
+export type MaybePromise<T> = T | Promise<T>
+export type LazyService<Service = any> = () => MaybePromise<UnwrappedDefault<Service>> | never
 
 type UnwrapReturnType<T> = T extends (...args: any[]) => any ? ReturnType<T> : T;
 
