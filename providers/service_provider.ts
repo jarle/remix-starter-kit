@@ -33,11 +33,11 @@ export default class ServiceProvider {
   }
 }
 
+type UnwrapReturnType<T> = T extends (...args: any[]) => any ? ReturnType<T> : T;
+
 type UnwrapProvider<T> = T extends { default: infer U }
-  ? U extends (...args: any[]) => any
-  ? ReturnType<U>
-  : U
-  : T;
+  ? UnwrapReturnType<U>
+  : UnwrapReturnType<T>;
 
 type ProvidedServices = {
   [K in keyof typeof ServiceProviders]: UnwrapProvider<
