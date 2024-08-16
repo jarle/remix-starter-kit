@@ -3,7 +3,6 @@ import { defineConfig } from 'vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig(({ isSsrBuild }) => ({
-  base: '/assets/',
   plugins: [
     remix({
       appDirectory: 'resources/remix_app',
