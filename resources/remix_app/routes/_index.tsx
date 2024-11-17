@@ -1,4 +1,4 @@
-import { json, type LoaderFunctionArgs, type MetaFunction } from '@remix-run/node'
+import { type LoaderFunctionArgs, type MetaFunction } from '@remix-run/node'
 import { useLoaderData } from '@remix-run/react'
 
 export const meta: MetaFunction = () => {
@@ -8,9 +8,9 @@ export const meta: MetaFunction = () => {
 export const loader = async ({ context }: LoaderFunctionArgs) => {
   const service = await context.make('hello_service')
 
-  return json({
+  return {
     message: service.getMessage(),
-  })
+  }
 }
 
 export default function Index() {

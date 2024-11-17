@@ -1,6 +1,6 @@
 # Minimal Starter Kit for @matstack/remix-adonisjs
 
-This repo contains an AdonisJS application tailored for building fullstack applications using [remix-adonisjs](https://remix-adonisjs.matstack.dev/).
+This repo contains an AdonisJS application tailored for building fullstack applications using [remix-adonisjs](https://matstack.dev/remix-adonisjs).
 
 ## Usage
 
