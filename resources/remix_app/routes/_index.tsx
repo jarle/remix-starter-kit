@@ -9,7 +9,6 @@ export function meta({ }: Route.MetaArgs) {
   ];
 }
 
-
 export async function loader({ context }: Route.LoaderArgs) {
   const service = await context.make('hello_service')
 
