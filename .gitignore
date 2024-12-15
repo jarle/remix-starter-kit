@@ -26,3 +26,5 @@ yarn-error.log
 
 vite.config.*.timestamp-*
 package-lock.json
+
+.react-router/
