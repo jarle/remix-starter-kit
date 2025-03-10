@@ -1,28 +1,13 @@
 {
   "extends": "@adonisjs/tsconfig/tsconfig.app.json",
   "include": [
-    "**/*",
-    "**/.server/**/*",
-    "**/.client/**/*",
-    ".react-router/types/**/*"
+    "**/*"
+  ],
+  "exclude": [
+    "resources/remix_app/**"
   ],
   "compilerOptions": {
-    "rootDirs": [
-      "./",
-      "./.react-router/types"
-    ],
     "rootDir": "./",
-    "types": [
-      "@react-router/node",
-      "vite/client"
-    ],
-    "outDir": "./build",
-    "module": "ES2022",
-    "moduleResolution": "bundler",
-    "lib": ["ES2019", "DOM", "DOM.Iterable"],
-    "jsx": "react-jsx",
-    "paths": {
-      "~/*": ["./resources/remix_app/*"]
-    }
+    "outDir": "./build"
   }
 }
