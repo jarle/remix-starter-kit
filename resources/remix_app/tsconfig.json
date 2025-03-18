@@ -1,10 +1,9 @@
 {
   "include": [
-    "**/*",
+    "../../**/*",
     "**/.server/**/*",
     "**/.client/**/*",
     "../../.react-router/types/**/*",
-    "../../providers/service_provider.ts"
   ],
   "compilerOptions": {
     "lib": [
