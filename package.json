@@ -6,7 +6,6 @@
   "license": "MIT",
   "scripts": {
     "start": "node bin/server.js",
-    "prebuild": "react-router typegen && tsc --project resources/remix_app",
     "build": "node ace build",
     "dev": "node ace serve --hmr",
     "test": "node ace test",
