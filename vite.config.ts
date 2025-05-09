@@ -4,7 +4,7 @@ import tailwindcss from "tailwindcss";
 import { defineConfig } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
-export default defineConfig(({ isSsrBuild }) => ({
+export default defineConfig({
   css: {
     postcss: {
       plugins: [tailwindcss, autoprefixer],
@@ -14,11 +14,8 @@ export default defineConfig(({ isSsrBuild }) => ({
     reactRouter(),
     tsconfigPaths(),
   ],
-  optimizeDeps: {
-    esbuildOptions: isSsrBuild
-      ? {
-          target: 'ES2022',
-        }
-      : {},
-  },
-}))
+  ssr: {
+    // Avoid bundling adapter code
+    external: ['@matstack/remix-adonisjs']
+  }
+})
