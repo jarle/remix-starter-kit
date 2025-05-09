@@ -1,3 +1,4 @@
+import { adonisContext } from '@matstack/remix-adonisjs';
 import { useLoaderData } from "react-router";
 import { Welcome } from "../welcome/welcome";
 import type { Route } from "./+types/_index";
@@ -10,7 +11,8 @@ export function meta({ }: Route.MetaArgs) {
 }
 
 export async function loader({ context }: Route.LoaderArgs) {
-  const service = await context.make('hello_service')
+  const { make } = context.get(adonisContext)
+  const service = await make('hello_service')
 
   return {
     message: service.getMessage(),
