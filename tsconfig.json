@@ -22,7 +22,9 @@
     "lib": ["ES2019", "DOM", "DOM.Iterable"],
     "jsx": "react-jsx",
     "paths": {
-      "~/*": ["./resources/remix_app/*"]
+      "~/*": [
+        "./resources/react_app/*"
+      ]
     }
   }
 }

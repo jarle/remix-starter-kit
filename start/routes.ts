@@ -9,6 +9,6 @@
 
 import router from '@adonisjs/core/services/router'
 
-router.any('*', async ({ remixHandler }) => {
-  return remixHandler()
+router.any('*', async ({ reactRouterHandler }) => {
+  return reactRouterHandler()
 })
