@@ -1,10 +1,10 @@
-# Minimal Starter Kit for @matstack/remix-adonisjs
+# Minimal Starter Kit for @matstack/react-adonisjs
 
-This repo contains an AdonisJS application tailored for building fullstack applications using [remix-adonisjs](https://matstack.dev/remix-adonisjs).
+This repo contains an AdonisJS application tailored for building fullstack applications using [react-adonisjs](https://matstack.dev/react-adonisjs).
 
 ## Usage
 
-You can create a new app using the `remix-adonisjs` boilerplate by executing the following command. The command will perform the following steps.
+You can create a new app using the `react-adonisjs` boilerplate by executing the following command. The command will perform the following steps.
 
 - Clone the repo
 - Install dependencies
@@ -12,14 +12,14 @@ You can create a new app using the `remix-adonisjs` boilerplate by executing the
 - Set app key using `node ace generate:key` command.
 - Configure the `@adonisjs/lucid` package.
 - Configure the `@adonisjs/auth` package.
-- Configure the `@matstack/remix-adonisjs` package.
+- Configure the `@matstack/react-adonisjs` package.
 
 ```sh
-npm init adonisjs@latest -- -K="github:jarle/remix-starter-kit"
+npm init adonisjs@latest -- -K="github:jarle/react-router-starter-kit"
 ```
 
-After installation you can add your first Remix route by running:
+After installation you can add your first React Router route by running:
 
 ```
-node ace remix:route hello
+node ace react:route hello
 ```

@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 export default {
-  content: ["./resources/remix_app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
+  content: ["./resources/react_app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       fontFamily: {
