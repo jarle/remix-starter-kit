@@ -65,7 +65,7 @@
     "@adonisjs/shield": "^8.1.1",
     "@adonisjs/static": "^1.1.1",
     "@adonisjs/vite": "^4.0.0",
-    "@matstack/react-adonisjs": "1.0.4",
+    "@matstack/react-adonisjs": "1.0.5",
     "@react-router/node": "^7.9.3",
     "@react-router/serve": "^7.9.3",
     "@vinejs/vine": "^2.1.0",
